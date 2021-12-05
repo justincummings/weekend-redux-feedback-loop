@@ -16,20 +16,26 @@ const feelingReducer =  (state = [], action) => {
     return state;
 };
 
-// const understandReducer = (state = [], action) => {
+const understandReducer =  (state = [], action) => {
+    if (action.type === "ADD_UNDERSTAND") {
+        return action.payload;
+    }
+    return state;
+};
 
-// }
-// return state;
+const supportReducer =  (state = [], action) => {
+    if (action.type === "ADD_SUPPORT") {
+        return action.payload;
+    }
+    return state;
+};
 
-// const supportReducer = (state = [], action) => {
-
-// }
-// return state;
-
-// const commentsReducer = (state = [], action ) => {
-
-// }
-// return state;
+const commentReducer =  (state = [], action) => {
+    if (action.type === "ADD_COMMENTS") {
+        return action.payload;
+    }
+    return state;
+};
 
 const storeInstance = createStore(
     combineReducers({
@@ -37,15 +43,13 @@ const storeInstance = createStore(
         feelingReducer,
         understandReducer,
         commentReducer
-
     }),
-    applyMiddleware
+    applyMiddleware(logger)
 );
 
 ReactDOM.render(
     <Provider store={storeInstance}>
         <App />
     </Provider>,
-    document.getElementById('root')
-);
+    document.getElementById('root'));
 registerServiceWorker();

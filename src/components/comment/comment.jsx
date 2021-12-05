@@ -21,8 +21,8 @@ return (
     <div>
         <h1>Comments? Questions? Concerns?</h1>
         <input type = "text" placeholder = "Comments"
-            name="comments" onChange={(event) => setComment(event.target.value)}/>
-        <button onClick={handleClick}>Next</button>
+            name="comments" onChange={(event) => setComments(event.target.value)}/>
+        <button onClick={commentSubmit}>Next</button>
     </div>
 )
 };
