@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 function feeling() {
     const [feeling, setFeeling] = useState('');
@@ -11,18 +11,17 @@ function feeling() {
         event.preventDefault();
         console.log('Understand is next');
         dispatch({
-            type: 'ADD_NEW_FEELING',
-            payload: feeling,
+            type: 'ADD_FEELING',
+            payload: feeling
         });
-        history.push('/understanding');
-        setFeeling('');
+        history.push('/understand');
     }; 
 
 
     return (
         <div>
             <h1>How are you feeling today?</h1>
-            <select name = "feeling" onChange={(event) => setResponse(event.target.value)}>
+            <select name = "feeling" onChange={(event) => setFeeling(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

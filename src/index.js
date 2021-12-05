@@ -7,33 +7,37 @@ import registerServiceWorker from './registerServiceWorker';
 //importing redux logger, store, reducers & middleware
 import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 
 const feelingReducer =  (state = [], action) => {
+    if (action.type === "ADD_FEELING") {
+        return action.payload;
+    }
+    return state;
+};
 
-}
-return state;
+// const understandReducer = (state = [], action) => {
 
-const understandReducer = (state = [], action) => {
+// }
+// return state;
 
-}
-return state;
+// const supportReducer = (state = [], action) => {
 
-const supportReducer = (state = [], action) => {
+// }
+// return state;
 
-}
-return state;
+// const commentsReducer = (state = [], action ) => {
 
-const commentsReducer = (state = [], action ) => {
-
-}
-return state;
+// }
+// return state;
 
 const storeInstance = createStore(
     combineReducers({
         supportReducer,
         feelingReducer,
-        understandReducer
+        understandReducer,
+        commentReducer
+
     }),
     applyMiddleware
 );

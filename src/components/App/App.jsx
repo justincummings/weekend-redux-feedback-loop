@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import feelings from '..Feelings/Feelings';
-import comments from '..Comments/Comments';
-import support from '..Support/Support';
-import understand from '..Understand/Understand';
-import { Router } from 'express';
+import feeling from '../feeling/feeling';
+import comment from '../comment/comment';
+import support from '../support/support';
+import understand from '../understand/understand';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 function App() {
 
@@ -19,11 +19,9 @@ function App() {
       <Router>
         <Route exact path="/" component={Home} />
         <Route exact path="/feeling" component={Feelings} />
-        <Route exact path="/understanding" component={Understand} />
+        <Route exact path="/understand" component={Understand} />
         <Route exact path="/support" component={Support} />
-        <Route exact path="/comments" component={Comments} />
-        <Route exact path="/review" component={Review} />
-        <Route exact path="/done" component={SubmittedConfirmation} />
+        <Route exact path="/comment" component={Comments} />
       </Router>
       </main>
     </div>
