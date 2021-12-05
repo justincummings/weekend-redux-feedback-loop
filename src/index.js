@@ -9,7 +9,7 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
 
-const feelingsReducer =  (state = [], action) => {
+const feelingReducer =  (state = [], action) => {
 
 }
 return state;
@@ -32,7 +32,7 @@ return state;
 const storeInstance = createStore(
     combineReducers({
         supportReducer,
-        feelingsReducer,
+        feelingReducer,
         understandReducer
     }),
     applyMiddleware
