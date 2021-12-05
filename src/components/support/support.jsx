@@ -1,9 +1,14 @@
-function support() {
-    const [support, setSupport] = useState('');
-    const history = useHistory();
-    const dispatch = useDispatch();
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
-    const understandSupport = (event) => {
+function support() {
+        const [support, setSupport] = useState('');
+        const history = useHistory();
+        const dispatch = useDispatch();
+    
+
+    const supportSubmit = (event) => {
         event.preventDefault();
         console.log('Comments are next');
         dispatch({
