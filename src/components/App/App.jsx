@@ -17,11 +17,10 @@ function App() {
       </header>
       <main>
       <Router>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/feeling" component={Feelings} />
-        <Route exact path="/understand" component={Understand} />
-        <Route exact path="/support" component={Support} />
-        <Route exact path="/comment" component={Comments} />
+        <Route exact path="/" component={feeling} />
+        <Route exact path="/understand" component={understand} />
+        <Route exact path="/support" component={support} />
+        <Route exact path="/comment" component={comment} />
       </Router>
       </main>
     </div>

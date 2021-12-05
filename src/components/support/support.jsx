@@ -15,13 +15,15 @@ function support() {
             type: 'ADD_SUPPORT',
             payload: support
         });
-        history.push('/comments');
+        history.push('/comment');
     }; 
 
 
     return (
         <div>
             <h1>How supported do you feel?</h1>
+            <h5>5 = Firth of Forth Bridge - strongest bridge in the world</h5>
+            <h5>1 = Pensacola Bay Bridge - most deficient bridge in the US</h5>
             <select name = "understand" onChange={(event) => setSupport(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>

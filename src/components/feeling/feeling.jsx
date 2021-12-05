@@ -21,6 +21,8 @@ function feeling() {
     return (
         <div>
             <h1>How are you feeling today?</h1>
+            <h5>5 = Ric Flair "WOOOOOOOOOO!"</h5>
+            <h5>1 = Gillberg - worst wrestler of all time</h5>
             <select name = "feeling" onChange={(event) => setFeeling(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>

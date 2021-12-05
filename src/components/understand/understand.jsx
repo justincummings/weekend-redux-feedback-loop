@@ -22,6 +22,8 @@ function understand() {
     return (
         <div>
             <h1>How well do you understand the material?</h1>
+            <h5>5 = Easy Peezy Lemon Squeezy</h5>
+            <h5>1 = Totally Lost</h5>
             <select name = "understand" onChange={(event) => setUnderstand(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
