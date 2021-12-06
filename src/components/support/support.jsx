@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function support() {
-        const [support, setSupport] = useState('');
+        const [support, setSupport] = useState(1);
         const history = useHistory();
         const dispatch = useDispatch();
     

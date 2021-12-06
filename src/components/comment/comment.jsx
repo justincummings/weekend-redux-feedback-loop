@@ -10,19 +10,23 @@ function comment() {
 
 const commentSubmit = (event) => {
     event.preventDefault();
-    console.log('Understand is next');
+    console.log('Review & Submit is next');
     dispatch({
         type: 'ADD_COMMENTS',
-        payload: comment
+        payload: comments
     });
+    history.push('/review');
 }; 
 
 return (
     <div>
         <h1>Comments? Questions? Concerns?</h1>
-        <input type = "text" placeholder = "Comments"
-            name="comments" onChange={(event) => setComments(event.target.value)}/>
-        <button onClick={commentSubmit}>Submit</button>
+        <input
+            type = "text" 
+            placeholder = "Comments"
+            value={comments} 
+            onChange={(event) => setComments(event.target.value)}/>
+        <button onClick={commentSubmit}>Next</button>
     </div>
 )
 };

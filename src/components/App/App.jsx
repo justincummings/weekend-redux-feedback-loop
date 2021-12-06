@@ -5,6 +5,8 @@ import feeling from '../feeling/feeling';
 import comment from '../comment/comment';
 import support from '../support/support';
 import understand from '../understand/understand';
+import review from '../review/review';
+import thanks from '../thanks/thanks';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <Route exact path="/understand" component={understand} />
         <Route exact path="/support" component={support} />
         <Route exact path="/comment" component={comment} />
+        <Route exact path="/review" component={review} />
+        <Route exact path="/thanks" component={thanks} />    
       </Router>
       </main>
     </div>

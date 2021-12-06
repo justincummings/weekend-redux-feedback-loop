@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function feeling() {
-    const [feeling, setFeeling] = useState('');
+    const [feeling, setFeeling] = useState(1);
     const history = useHistory();
     const dispatch = useDispatch();
 

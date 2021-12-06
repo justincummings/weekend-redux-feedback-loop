@@ -37,6 +37,12 @@ const commentReducer =  (state = [], action) => {
     return state;
 };
 
+const reviewReducer = (state = [], action) => {
+    if(action.type === "CLEAR_FEEDBACK"){
+        return
+    }
+}
+
 const storeInstance = createStore(
     combineReducers({
         supportReducer,
