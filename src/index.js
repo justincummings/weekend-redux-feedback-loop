@@ -39,8 +39,9 @@ const commentReducer =  (state = [], action) => {
 
 const reviewReducer = (state = [], action) => {
     if(action.type === "CLEAR_FEEDBACK"){
-        return
+        return action.payload
     }
+    return state;
 }
 
 const storeInstance = createStore(
@@ -48,7 +49,8 @@ const storeInstance = createStore(
         supportReducer,
         feelingReducer,
         understandReducer,
-        commentReducer
+        commentReducer,
+        reviewReducer
     }),
     applyMiddleware(logger)
 );
